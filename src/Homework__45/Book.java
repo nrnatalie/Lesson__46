@@ -5,10 +5,12 @@ package Homework__45;
   //  Создайте компаратор, который позволит сортировать книги по названию,
     //  при одинаковых названиях - по автору (и там, и там - по алфавиту)
 
-    //Задача 2* (не обязательно)
+import java.util.Comparator;
+
+//Задача 2* (не обязательно)
     //Создайте компаратор, который позволит сортировать книги по убыванию количества страниц,
       //  а при совпадающем объёме - по названиям ("по возрастанию", по алфавиту).
-public class Book {
+public class Book implements Comparator<Book> {
   private final String author;
   private final String title;
   private final int pages;
@@ -31,4 +33,9 @@ public class Book {
       public int getPages() {
         return pages;
       }
-    }
+
+  @Override
+  public int compare(Book o1, Book o2) {
+    return 0;
+  }
+}
