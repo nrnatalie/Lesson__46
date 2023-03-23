@@ -18,7 +18,17 @@ public class Book {
     this.author = author;
     this.title = title;
     this.pages = pages;
-
   }
 
-}
+      public String getAuthor() {
+        return author;
+      }
+
+      public String getTitle() {
+        return title;
+      }
+
+      public int getPages() {
+        return pages;
+      }
+    }
