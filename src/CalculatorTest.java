@@ -46,6 +46,16 @@ public class CalculatorTest {
   public void addZeros(){
     assertEquals(0,calc.add(0,0));
   }
+  @Test
+      public void addLimits(){
+    assertEquals(-1,calc.add(Integer.MIN_VALUE,Integer.MAX_VALUE));
+    assertEquals(-1,calc.add(Integer.MAX_VALUE,Integer.MIN_VALUE));
+    assertEquals(Integer.MAX_VALUE,calc.add(Integer.MAX_VALUE,0));
+    assertEquals(Integer.MIN_VALUE,calc.add(0,Integer.MIN_VALUE));
+
+
+  }
+
 }
 
 
