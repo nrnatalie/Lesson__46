@@ -33,6 +33,19 @@ public class CalculatorTest {
     assertEquals(-5, calc.add(-5,0));
     assertEquals(-5,calc.add(0,-5));
   }
+  @Test
+  public void addCommutative(){
+    assertEquals(calc.add(3,57),calc.add(57,3));
+  }
+  @Test
+  public  void addPositiveZero(){
+    assertEquals(5,calc.add(5,0));
+    assertEquals(5,calc.add(0,5));
+  }
+  @Test
+  public void addZeros(){
+    assertEquals(0,calc.add(0,0));
+  }
 }
 
 
